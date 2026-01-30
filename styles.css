@@ -2,25 +2,29 @@
 
 /* ================= CSS VARIABLES ================= */
 :root {
-  --bg: #0b0f19;
-  --bg-soft: rgba(255,255,255,0.08);
-  --text: #e5e7eb;
-  --text-muted: #9ca3af;
-  --accent: #7c3aed;
-  --glass: rgba(255,255,255,0.12);
-  --border: rgba(255,255,255,0.18);
+  --bg: #050814;                         /* deeper background */
+  --bg-soft: rgba(255,255,255,0.14);
+
+  --text: #f8fafc;                       /* brighter text */
+  --text-muted: #cbd5e1;                 /* readable muted text */
+
+  --accent: #8b5cf6;                     /* vibrant violet */
+  --glass: rgba(255,255,255,0.18);       /* clearer glass */
+  --border: rgba(255,255,255,0.28);
 }
 
 /* LIGHT MODE */
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #f8fafc;
-    --bg-soft: rgba(0,0,0,0.04);
-    --text: #0f172a;
+    --bg: #f1f5f9;
+    --bg-soft: rgba(0,0,0,0.06);
+
+    --text: #020617;
     --text-muted: #475569;
+
     --accent: #7c3aed;
-    --glass: rgba(255,255,255,0.7);
-    --border: rgba(0,0,0,0.1);
+    --glass: rgba(255,255,255,0.85);
+    --border: rgba(0,0,0,0.12);
   }
 }
 
@@ -37,7 +41,7 @@ html {
 }
 
 body {
-  background: radial-gradient(circle at top, #111827, var(--bg));
+  background: radial-gradient(circle at top, #0f172a, var(--bg));
   color: var(--text);
   line-height: 1.75;
 }
@@ -60,7 +64,7 @@ a {
   top: 0;
   z-index: 100;
   backdrop-filter: blur(14px);
-  background: rgba(0,0,0,0.35);
+  background: rgba(2,6,23,0.65);
   border-bottom: 1px solid var(--border);
 }
 
@@ -130,7 +134,7 @@ a {
   width: 100%;
   max-width: 340px;
   border-radius: 22px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  box-shadow: 0 25px 70px rgba(0,0,0,0.75);
 }
 
 /* ================= BUTTONS ================= */
@@ -148,11 +152,11 @@ a {
 }
 
 .btn:hover {
-  transform: translateY(-2px);
+  transform: translateY(-3px);
 }
 
 .primary {
-  background: linear-gradient(135deg, var(--accent), #5b21b6);
+  background: linear-gradient(135deg, #8b5cf6, #6366f1);
   color: #fff;
 }
 
@@ -174,6 +178,7 @@ a {
   text-align: center;
   margin-bottom: 60px;
   position: relative;
+  color: var(--text);
 }
 
 .section-title::after {
@@ -194,13 +199,13 @@ a {
   border: 1px solid var(--border);
   border-radius: 20px;
   padding: 28px;
-  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.35);
   transition: transform 0.35s ease;
 }
 
 .skill-card:hover,
 .project-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
 }
 
 /* ================= SKILLS ================= */
@@ -247,7 +252,7 @@ a {
 .footer {
   text-align: center;
   padding: 22px;
-  background: rgba(0,0,0,0.4);
+  background: rgba(2,6,23,0.75);
   border-top: 1px solid var(--border);
   font-size: 14px;
 }
