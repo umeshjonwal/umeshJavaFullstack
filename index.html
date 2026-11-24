@@ -3,186 +3,539 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Umesh Jonwal | Java Full Stack Developer</title>
+  <title>Umesh Jonwal — Full Stack Developer & AI Builder</title>
+  <meta name="description" content="Umesh Jonwal — Full Stack Developer, AI SaaS Builder, Founder of ClyraWeb.in. Expert in React, Next.js, TypeScript, Supabase & Google Gemini API."/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
   <!-- Icons -->
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ================= NAVBAR ================= -->
-<header class="header">
-  <nav class="nav container">
-    <div class="logo">Umesh<span>.</span></div>
+<!-- ═══════════════════════════════════════════════
+     NAVBAR
+════════════════════════════════════════════════ -->
+<header class="header" id="header">
+  <nav class="nav">
+    <a href="#" class="logo">UJ<span class="logo-dot">.</span></a>
 
-    <input type="checkbox" id="menu-toggle">
-    <label for="menu-toggle" class="menu-icon">
-      <i class="ri-menu-3-line"></i>
-    </label>
-
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#skills">Skills</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
+
+    <div class="nav-actions">
+      <a href="resume.pdf.pdf" class="btn-nav" download>Resume <i class="ri-download-line"></i></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section id="about" class="hero container reveal">
-  <div class="hero-text">
-    <h1>Java Full Stack Developer</h1>
-    <h2>Hi, I’m <span>Umesh Jonwal</span></h2>
-    <p>
-      Detail-oriented Java Full Stack Developer with hands-on experience building scalable
-      web applications using <strong>Java, Spring Boot, Thymeleaf & MySQL</strong>.
-      Skilled in REST APIs, responsive UI development, cloud integrations and production deployments.
-    </p>
+<!-- ═══════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<section id="about" class="hero">
+  <!-- Animated background blobs -->
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="blob blob-3"></div>
+  <div class="grid-overlay"></div>
 
-    <div class="hero-buttons">
-      <a href="resume.pdf.pdf" class="btn primary">Download Resume</a>
-      <a href="#projects" class="btn outline">View Projects</a>
+  <div class="hero-content">
+    <div class="hero-left fade-up">
+      <div class="badge">
+        <span class="badge-dot"></span>
+        Available for opportunities
+      </div>
+
+      <h1 class="hero-title">
+        Full Stack<br>
+        <span class="gradient-text">Developer</span> &amp;<br>
+        AI Builder
+      </h1>
+
+      <p class="hero-desc">
+        I'm <strong>Umesh Jonwal</strong> — I build production-grade AI SaaS products.
+        Founder of <a href="https://clyraweb.in" target="_blank" class="inline-link">ClyraWeb.in</a>,
+        an AI-powered platform that turns natural language prompts into full-stack Next.js applications.
+      </p>
+
+      <div class="hero-tags">
+        <span class="tag">Next.js 15</span>
+        <span class="tag">TypeScript</span>
+        <span class="tag">Supabase</span>
+        <span class="tag">Gemini AI</span>
+        <span class="tag">React 19</span>
+      </div>
+
+      <div class="hero-cta">
+        <a href="#projects" class="btn-primary">View Projects <i class="ri-arrow-right-line"></i></a>
+        <a href="#contact" class="btn-ghost">Get in touch</a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/javawithumesh" target="_blank" class="social-link" aria-label="LinkedIn">
+          <i class="ri-linkedin-fill"></i>
+        </a>
+        <a href="https://github.com/umeshjonwal" target="_blank" class="social-link" aria-label="GitHub">
+          <i class="ri-github-fill"></i>
+        </a>
+        <a href="mailto:codewithumesh00@gmail.com" class="social-link" aria-label="Email">
+          <i class="ri-mail-fill"></i>
+        </a>
+        <a href="https://clyraweb.in" target="_blank" class="social-link" aria-label="ClyraWeb">
+          <i class="ri-global-line"></i>
+        </a>
+      </div>
     </div>
 
-    <div class="socials">
+    <div class="hero-right fade-up delay-2">
+      <div class="profile-card">
+        <div class="profile-glow"></div>
+        <img src="assets/profile.jpg" alt="Umesh Jonwal" class="profile-img" />
+        <div class="profile-status">
+          <span class="pulse"></span>
+          Building ClyraWeb.in
+        </div>
+        <div class="profile-stats">
+          <div class="stat">
+            <span class="stat-num">2+</span>
+            <span class="stat-label">Production Apps</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">100+</span>
+            <span class="stat-label">Daily Users</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">AI</span>
+            <span class="stat-label">Powered SaaS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     SKILLS
+════════════════════════════════════════════════ -->
+<section id="skills" class="section skills-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Technical Skills</span>
+      <h2 class="section-title">What I Work With</h2>
+      <p class="section-desc">A production-tested stack across frontend, backend, AI, and cloud infrastructure.</p>
+    </div>
+
+    <div class="skills-grid fade-up delay-1">
+
+      <div class="skill-category">
+        <div class="skill-icon"><i class="ri-code-s-slash-line"></i></div>
+        <h3>Languages</h3>
+        <div class="skill-pills">
+          <span>TypeScript</span><span>JavaScript</span>
+          <span>Python <em>(Basic)</em></span>
+          <span>HTML5</span><span>CSS3</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-icon"><i class="ri-reactjs-line"></i></div>
+        <h3>Frontend</h3>
+        <div class="skill-pills">
+          <span>React 19</span><span>Next.js 15</span>
+          <span>Tailwind CSS 4</span><span>Framer Motion</span>
+          <span>Radix UI</span><span>shadcn/ui</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-icon"><i class="ri-server-line"></i></div>
+        <h3>Backend</h3>
+        <div class="skill-pills">
+          <span>Next.js API Routes</span><span>Node.js</span>
+          <span>REST APIs</span><span>Server Actions</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-icon"><i class="ri-sparkling-line"></i></div>
+        <h3>AI / LLM</h3>
+        <div class="skill-pills">
+          <span>Google Gemini API</span><span>Prompt Engineering</span>
+          <span>LLM Code Generation</span><span>Structured Output</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-icon"><i class="ri-database-2-line"></i></div>
+        <h3>Database & Cloud</h3>
+        <div class="skill-pills">
+          <span>Supabase</span><span>PostgreSQL</span>
+          <span>MySQL</span><span>E2B Sandboxes</span>
+          <span>Vercel</span><span>Cloudinary</span>
+        </div>
+      </div>
+
+      <div class="skill-category">
+        <div class="skill-icon"><i class="ri-tools-line"></i></div>
+        <h3>Tools & Concepts</h3>
+        <div class="skill-pills">
+          <span>Git / GitHub</span><span>Postman</span>
+          <span>Monaco Editor</span><span>Multi-Tenant SaaS</span>
+          <span>OAuth / JWT</span><span>SSRF Guards</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     PROJECTS
+════════════════════════════════════════════════ -->
+<section id="projects" class="section projects-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">My Work</span>
+      <h2 class="section-title">Projects &amp; Live Apps</h2>
+      <p class="section-desc">Real products shipped to production — with real users.</p>
+    </div>
+
+    <!-- ── FEATURED: ClyraWeb ── -->
+    <div class="featured-project fade-up delay-1">
+      <div class="featured-badge">⭐ Featured Project</div>
+      <div class="featured-inner">
+        <div class="featured-content">
+          <div class="project-meta">
+            <span class="project-type">AI SaaS Platform</span>
+            <span class="project-status live"><span></span> Live</span>
+          </div>
+          <h3 class="featured-title">ClyraWeb.in — AI App Builder</h3>
+          <p class="featured-desc">
+            A production-grade AI-powered cloud vibe-coding platform. Users submit a natural language
+            prompt and receive a fully functional, deployable <strong>Next.js application within seconds</strong>.
+            Complete with live preview, in-browser code editor, visual editor, GitHub sync, custom domains, and versioned deployments.
+          </p>
+          <div class="featured-tech">
+            <span>Next.js 15</span><span>React 19</span><span>TypeScript</span>
+            <span>Tailwind CSS 4</span><span>Supabase</span><span>Gemini API</span>
+            <span>E2B Sandboxes</span><span>Monaco Editor</span><span>Framer Motion</span>
+          </div>
+          <div class="featured-highlights">
+            <div class="highlight-item">
+              <i class="ri-ai-generate"></i>
+              <span>LLM-driven code generation pipeline</span>
+            </div>
+            <div class="highlight-item">
+              <i class="ri-eye-line"></i>
+              <span>Real-time live preview with E2B cloud sandboxes</span>
+            </div>
+            <div class="highlight-item">
+              <i class="ri-shield-check-line"></i>
+              <span>Multi-tenant SaaS with SSRF-safe API proxy</span>
+            </div>
+            <div class="highlight-item">
+              <i class="ri-code-box-line"></i>
+              <span>Visual editor + Monaco in-browser code editor</span>
+            </div>
+            <div class="highlight-item">
+              <i class="ri-github-line"></i>
+              <span>GitHub sync, versioned deploys &amp; custom domains</span>
+            </div>
+            <div class="highlight-item">
+              <i class="ri-test-tube-line"></i>
+              <span>100+ offline test suites + TypeScript strict mode CI</span>
+            </div>
+          </div>
+          <div class="featured-cta">
+            <a href="https://clyraweb.in" target="_blank" class="btn-primary">
+              Visit ClyraWeb.in <i class="ri-external-link-line"></i>
+            </a>
+          </div>
+        </div>
+        <div class="featured-visual">
+          <div class="browser-mockup">
+            <div class="browser-bar">
+              <div class="browser-dots">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+              </div>
+              <div class="browser-url">clyraweb.in</div>
+            </div>
+            <div class="browser-screen">
+              <img src="assets/clyraweb.jpg" alt="ClyraWeb.in — AI App Builder" class="clyra-screenshot" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── OTHER PROJECTS ── -->
+    <div class="projects-grid fade-up delay-2">
+
+      <!-- Doppelganger -->
+      <div class="project-card">
+        <div class="project-card-img">
+          <img src="assets/Untitled1.png" alt="Doppelganger Finder" onerror="this.parentElement.classList.add('img-error')"/>
+          <div class="project-overlay">
+            <a href="https://doppelganger.world/" target="_blank" class="overlay-btn">
+              <i class="ri-external-link-line"></i> Live App
+            </a>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-meta">
+            <span class="project-type">Real-Time Web App</span>
+            <span class="project-status live"><span></span> Live</span>
+          </div>
+          <h3>Doppelganger Finder</h3>
+          <p>Upload a photo and find your digital doppelganger in under 2 seconds. Cloud Vision API for image processing, Supabase for auth &amp; storage, 100+ daily requests handled in production.</p>
+          <div class="project-tech">
+            <span>JavaScript</span><span>Supabase</span><span>Cloud Vision API</span>
+          </div>
+          <a href="https://doppelganger.world/" target="_blank" class="project-link">
+            doppelganger.world <i class="ri-arrow-right-up-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Portfolio -->
+      <div class="project-card">
+        <div class="project-card-img no-img-bg">
+          <div class="project-icon-large"><i class="ri-user-3-line"></i></div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-meta">
+            <span class="project-type">Personal Site</span>
+            <span class="project-status live"><span></span> Live</span>
+          </div>
+          <h3>Personal Portfolio</h3>
+          <p>Responsive, accessible portfolio showcasing projects, skills, and contact information. Mobile-first design with smooth animations and clean UI.</p>
+          <div class="project-tech">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span>
+          </div>
+          <a href="https://umeshjonwal.github.io/umeshJavaFullstack/" target="_blank" class="project-link">
+            Live Portfolio <i class="ri-arrow-right-up-line"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     EXPERIENCE / TIMELINE
+════════════════════════════════════════════════ -->
+<section class="section exp-section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Journey</span>
+      <h2 class="section-title">Experience &amp; Education</h2>
+    </div>
+
+    <div class="timeline fade-up delay-1">
+
+      <div class="timeline-item">
+        <div class="timeline-dot"></div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-title">Full Stack Developer &amp; Founder</h3>
+              <p class="tl-org"><a href="https://clyraweb.in" target="_blank">ClyraWeb.in</a> · Self-Employed</p>
+            </div>
+            <span class="tl-date">Nov 2026 – Present</span>
+          </div>
+          <p class="tl-desc">Architected and independently shipped ClyraWeb.in — a production AI SaaS platform. Owns the full stack: frontend, backend, AI pipeline, cloud infra, CI testing, and production deployment.</p>
+          <div class="tl-tags"><span>Next.js 15</span><span>Gemini API</span><span>Supabase</span><span>E2B</span></div>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot edu"></div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-title">Full Stack Developer Certification</h3>
+              <p class="tl-org">Tap Academy · Bengaluru</p>
+            </div>
+            <span class="tl-date">2024</span>
+          </div>
+          <p class="tl-desc">Received A grade in major project review. Completed intensive full stack training covering modern web development, APIs, and deployment.</p>
+        </div>
+      </div>
+
+      <div class="timeline-item">
+        <div class="timeline-dot edu"></div>
+        <div class="timeline-card">
+          <div class="tl-header">
+            <div>
+              <h3 class="tl-title">Bachelor of Computer Applications (B.C.A.)</h3>
+              <p class="tl-org">Chandigarh University · Mohali</p>
+            </div>
+            <span class="tl-date">May 2024</span>
+          </div>
+          <p class="tl-desc">Key subjects: Data Structures, DBMS, Web Technologies, Software Engineering, OOP.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     CONTACT
+════════════════════════════════════════════════ -->
+<section id="contact" class="section contact-section">
+  <div class="container">
+    <div class="contact-inner fade-up">
+      <div class="contact-left">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Let's Build Something</h2>
+        <p class="section-desc">Open to freelance projects, full-time roles, and collaborations. Drop a message — I reply fast.</p>
+
+        <div class="contact-links">
+          <a href="mailto:codewithumesh00@gmail.com" class="contact-item">
+            <div class="contact-icon"><i class="ri-mail-line"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <span class="contact-val">codewithumesh00@gmail.com</span>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/javawithumesh" target="_blank" class="contact-item">
+            <div class="contact-icon"><i class="ri-linkedin-line"></i></div>
+            <div>
+              <span class="contact-label">LinkedIn</span>
+              <span class="contact-val">linkedin.com/in/javawithumesh</span>
+            </div>
+          </a>
+          <a href="https://github.com/umeshjonwal" target="_blank" class="contact-item">
+            <div class="contact-icon"><i class="ri-github-line"></i></div>
+            <div>
+              <span class="contact-label">GitHub</span>
+              <span class="contact-val">github.com/umeshjonwal</span>
+            </div>
+          </a>
+          <a href="https://clyraweb.in" target="_blank" class="contact-item">
+            <div class="contact-icon"><i class="ri-global-line"></i></div>
+            <div>
+              <span class="contact-label">Product</span>
+              <span class="contact-val">clyraweb.in</span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form class="contact-form" onsubmit="handleForm(event)">
+          <div class="form-group">
+            <label>Name</label>
+            <input type="text" placeholder="Your name" required />
+          </div>
+          <div class="form-group">
+            <label>Email</label>
+            <input type="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>Message</label>
+            <textarea rows="5" placeholder="What would you like to discuss?" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary w-full">
+            Send Message <i class="ri-send-plane-line"></i>
+          </button>
+          <p class="form-note" id="formNote"></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-logo">UJ<span>.</span></div>
+    <p class="footer-copy">© 2026 Umesh Jonwal · Built with passion · <a href="https://clyraweb.in" target="_blank">clyraweb.in</a></p>
+    <div class="footer-socials">
       <a href="https://www.linkedin.com/in/javawithumesh" target="_blank"><i class="ri-linkedin-fill"></i></a>
       <a href="https://github.com/umeshjonwal" target="_blank"><i class="ri-github-fill"></i></a>
       <a href="mailto:codewithumesh00@gmail.com"><i class="ri-mail-fill"></i></a>
     </div>
   </div>
-
-  <div class="hero-img">
-    <img src="assets/profile.jpg" alt="Umesh Jonwal">
-  </div>
-</section>
-
-<!-- ================= SKILLS ================= -->
-<section id="skills" class="container reveal">
-  <h2 class="section-title">Core Technical Skills</h2>
-
-  <div class="skills-grid">
-    <div class="skill-card">Java, JavaScript (Basic), HTML5, CSS3</div>
-    <div class="skill-card">Spring Boot, REST APIs, MVC, Thymeleaf</div>
-    <div class="skill-card">MySQL, SQL Queries, Schema Design</div>
-    <div class="skill-card">Supabase (Auth, DB, Storage), Cloudinary</div>
-    <div class="skill-card">Google Gemini API, Cloud APIs</div>
-    <div class="skill-card">Git, GitHub, Postman, OOP, Multithreading</div>
-  </div>
-</section>
-
-<!-- ================= PROJECTS ================= -->
-<section id="projects" class="container reveal">
-  <h2 class="section-title">Projects & Live Applications</h2>
-
-  <div class="projects-grid">
-
-    <!-- PROJECT 1 -->
-    <div class="project-card">
-      <a href="https://doppelganger.world/" target="_blank" class="project-img">
-        <img src="assets/Untitled1.png" alt="Doppelganger Finder">
-      </a>
-      <h3>Doppelganger Finder — Real-Time Web Application</h3>
-      <p class="tech">HTML • CSS • JavaScript • Supabase • Cloud API</p>
-      <p>
-        Developed a real-time web application that allows users to upload photos and find
-        their digital doppelganger. Integrated Supabase for authentication, database and
-        secure storage. Implemented Cloud API-based image processing achieving
-        <strong>&lt;2 second latency</strong> and handling <strong>100+ daily requests</strong>.
-        Designed a responsive, mobile-first UI and deployed to production.
-      </p>
-      <a href="https://doppelganger.world/" target="_blank">Live Project →</a>
-    </div>
-
-    <!-- PROJECT 2 -->
-    <div class="project-card">
-      <a href="https://coruscating-beijinho-edb225.netlify.app/" target="_blank" class="project-img">
-        <img src="assets/Untitled2.png" alt="AI Email Generator">
-      </a>
-      <h3>AI Email Generator — Intelligent Automation Tool</h3>
-      <p class="tech">React • Vite • Java (Spring Boot) • Google Gemini API • Postman</p>
-      <p>
-        Built an AI-powered email reply generator that drafts professional responses with
-        approximately <strong>70% accuracy</strong>, reducing manual email effort by
-        <strong>3 hours per week</strong>. Developed a fast React frontend and Spring Boot backend,
-        integrated Google Gemini for NLP, and performed API validation and regression testing
-        using Postman.
-      </p>
-      <a href="https://coruscating-beijinho-edb225.netlify.app/" target="_blank">Live Project →</a>
-    </div>
-
-    <!-- PROJECT 3 -->
-    <div class="project-card">
-      <a href="https://umeshjonwal.github.io/spotify-clone/" target="_blank" class="project-img">
-        <img src="assets/Untitled3.png" alt="Spotify Clone">
-      </a>
-      <h3>Spotify UI Clone</h3>
-      <p class="tech">HTML • CSS • JavaScript</p>
-      <p>
-        Created a responsive frontend clone of Spotify focusing on layout accuracy,
-        responsiveness and modern UI practices. Improved CSS structuring and
-        mobile-first design skills.
-      </p>
-      <a href="https://umeshjonwal.github.io/spotify-clone/" target="_blank">View Project →</a>
-    </div>
-
-    <!-- PROJECT 4 -->
-    <div class="project-card">
-      <a href="https://umeshjonwal.github.io/mirandaclone/" target="_blank" class="project-img">
-        <img src="assets/Untitled4.png" alt="Miranda Clone">
-      </a>
-      <h3>Miranda Website Clone</h3>
-      <p class="tech">HTML, javaScript and CSS</p>
-      <p>
-        Developed a pixel-accurate UI clone focusing on typography, spacing and layout
-        consistency. Strengthened frontend styling and responsive design fundamentals.
-      </p>
-      <a href="https://umeshjonwal.github.io/mirandaclone/" target="_blank">View Project →</a>
-    </div>
-
-    <!-- PROJECT 5 -->
-    <div class="project-card">
-      <a href="https://umeshjonwal.github.io/narmataproject/" target="_blank" class="project-img">
-        <img src="assets/Untitled5.png" alt="Narmata Project">
-      </a>
-      <h3>Narmata Web Project</h3>
-      <p class="tech">HTML • CSS  and JavaScript</p>
-      <p>
-        Built a static web project to practice structured layouts, semantic HTML
-        and clean CSS organization.
-      </p>
-      <a href="https://umeshjonwal.github.io/narmataproject/" target="_blank">View Project →</a>
-    </div>
-
-    <!-- PROJECT 6 -->
-    <div class="project-card">
-      <a href="https://clyraworld.netlify.app/" target="_blank" class="project-img">
-        <img src="assets/Untitled6.png" alt="Clyra World">
-      </a>
-      <h3>Clyra World</h3>
-      <p class="tech">HTML • CSS •rect js. Netlify</p>
-      <p>
-        Designed and deployed a creative website project on Netlify, focusing on
-        visual presentation, deployment workflow and frontend polish.
-      </p>
-      <a href="https://clyraworld.netlify.app/" target="_blank">Live Project →</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section id="contact" class="container reveal contact">
-  <h2 class="section-title">Get In Touch</h2>
-  <p>📍 New Delhi, India</p>
-  <p>📞 +91 9911274711</p>
-  <p>📧 codewithumesh00@gmail.com</p>
-</section>
-
-<footer class="footer">
-  © 2025 Umesh Jonwal • Java Full Stack Developer
 </footer>
 
+<!-- Back to top -->
+<button class="back-top" id="backTop" aria-label="Back to top">
+  <i class="ri-arrow-up-line"></i>
+</button>
+
+<script>
+  // ── Navbar scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 60);
+    document.getElementById('backTop').classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // ── Hamburger
+  const ham = document.getElementById('hamburger');
+  const navLinks = document.getElementById('navLinks');
+  ham.addEventListener('click', () => {
+    ham.classList.toggle('open');
+    navLinks.classList.toggle('open');
+  });
+  document.querySelectorAll('.nav-link').forEach(l => l.addEventListener('click', () => {
+    ham.classList.remove('open');
+    navLinks.classList.remove('open');
+  }));
+
+  // ── Scroll animations
+  const obs = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-up').forEach(el => obs.observe(el));
+
+  // ── Back to top
+  document.getElementById('backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // ── Active nav link
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+    document.querySelectorAll('.nav-link').forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + current);
+    });
+  });
+
+  // ── Contact form
+  function handleForm(e) {
+    e.preventDefault();
+    const note = document.getElementById('formNote');
+    note.textContent = '✓ Thanks! I\'ll get back to you soon.';
+    note.style.color = '#4ade80';
+    e.target.reset();
+  }
+</script>
 </body>
 </html>
